@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 01</title>
+</head>
+
+<body>
+
+    <div id="car"></div>
+
+    <script>
+        /*
+        Задание:
+        Перепишите данный код на использование классов вместо функций-конструкторов.
+        */
+
+        // function Car(model, yaer) {
+        //     this.yaer = yaer;
+        //     this.model = model;
+        // }
+
+        // Car.prototype.showInfo = function () {
+        //     console.log(this.model + " " + this.yaer);
+        // }
+
+        // let car1 = new Car("Audi", 2018);
+        // car1.showInfo();
+
+        //let Car = class -  альтернратива
+        class Car 
+        {
+            constructor(model, yaer)
+            {
+                this.yaer = yaer;
+                this.model = model;
+            }
+
+            showInfo() 
+            {
+                let output = document.getElementById("car");
+                output.innerHTML = this.model + " " + this.yaer;
+            }
+        }   
+
+        let car1 = new Car("Audi", 2018);
+        car1.showInfo();
+    </script>
+</body>
+
+</html>
