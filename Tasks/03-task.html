@@ -69,7 +69,11 @@
             }
 
             set image(value) {
-                this.#image = value;
+                if (value < 0) {
+                    alert("Error");
+                } else {
+                    this.#image = value;
+                }
             }
 
             get manufacturer() {
@@ -77,7 +81,11 @@
             }
 
             set manufacturer(value) {
-                this.#manufacturer = value;
+                if (value < 0) {
+                    alert("Error");
+                } else {
+                    this.#manufacturer = value;
+                }
             }
 
             get html() {

@@ -33,16 +33,42 @@
         //let Car = class -  альтернратива
         class Car 
         {
+            #yaer
+            #model
             constructor(model, yaer)
             {
-                this.yaer = yaer;
-                this.model = model;
+                this.#yaer = yaer;
+                this.#model = model;
             }
 
             showInfo() 
             {
                 let output = document.getElementById("car");
                 output.innerHTML = this.model + " " + this.yaer;
+            }
+
+            get model() {
+                return this.#model;
+            }
+
+            set model(value) {
+                if (value < 0) {
+                    alert("Error");
+                } else {
+                    this.#model = value;
+                }
+            }
+
+            get yaer() {
+                return this.#model;
+            }
+
+            set yaer(value) {
+                if (value < 0) {
+                    alert("Error");
+                } else {
+                    this.#yaer = value;
+                }
             }
         }   
 

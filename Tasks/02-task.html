@@ -50,7 +50,11 @@
             }
 
             set height(value) {
-                this.#height = value;
+                if (value < 0) {
+                    alert("Error");
+                } else {
+                    this.#height = value;
+                }
             }
 
             get radius() {
@@ -58,7 +62,11 @@
             }
 
             set radius(value) {
-                this.#radius = value;
+                if (value < 0) {
+                    alert("Error");
+                } else {
+                    this.#height = value;
+                }
             }
         }
 
